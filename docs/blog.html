@@ -1,0 +1,27 @@
+---
+layout: default
+title: Notes
+---
+<!DOCTYPE html>
+    <body class="dark">
+        <div class="title">
+            <span class="titleSpan">
+                Pretty much a blog
+            </span>
+        <div class="arrowWrap"><div class="arrow"><img src="./assets/images/arrow.svg" alt=""></div></div>
+        </div>
+
+
+
+        <div class="main-content">
+            {% for post in site.posts %}
+            <section class="note-item ina">
+                <h4>NOTE ITEM</h4>
+                
+                <h2><a href="{{ post.url }}" class="blog-title">{{ post.title }}</a></h2>
+                <span style="color:#777">{{post.date}}</span><br>
+            </section>
+            {% endfor %}
+        </div>
+    </body>
+</html>
